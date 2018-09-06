@@ -1,0 +1,527 @@
+<Collection name="NGAUS" guid="{60CEE273-9A91-44A7-91F6-0BDED0B8A2F7}" system="No">
+	<Help></Help>
+	<Addon name="Cap Wiz Form" guid="{4DA17C60-AC0F-4249-890A-8F8D17DEB1CD}" type="Add-on">
+		<Copy></Copy>
+		<CopyText></CopyText>
+		<ActiveXProgramID><![CDATA[ngaus.capwhizclass]]></ActiveXProgramID>
+		<DotNetClass></DotNetClass>
+		<ArgumentList></ArgumentList>
+		<AsAjax>No</AsAjax>
+		<Filter>No</Filter>
+		<Help></Help>
+		<HelpLink></HelpLink>
+		<Icon Link="" width="0" height="0" sprites="0" />
+		<InIframe>No</InIframe>
+		<BlockEditTools>No</BlockEditTools>
+		<FormXML></FormXML>
+		<IsInline>No</IsInline>
+		<JavascriptOnLoad></JavascriptOnLoad>
+		<JavascriptInHead></JavascriptInHead>
+		<JavascriptBodyEnd></JavascriptBodyEnd>
+		<MetaDescription></MetaDescription>
+		<OtherHeadTags></OtherHeadTags>
+		<Content>Yes</Content>
+		<Template>Yes</Template>
+		<Admin>Yes</Admin>
+		<OnPageEndEvent>No</OnPageEndEvent>
+		<OnPageStartEvent>No</OnPageStartEvent>
+		<OnBodyStart>No</OnBodyStart>
+		<OnBodyEnd>No</OnBodyEnd>
+		<RemoteMethod>No</RemoteMethod>
+		<ProcessRunOnce>No</ProcessRunOnce>
+		<ProcessInterval>0</ProcessInterval>
+		<PageTitle></PageTitle>
+		<RemoteAssetLink></RemoteAssetLink>
+		<Styles></Styles>
+		<Scripting Language="" EntryPoint="" Timeout="5000"/>
+	</Addon>
+	<Addon name="Child Page List (Right Column)" guid="{F4ED13E3-A761-48BC-B692-835264B5B96A}" type="Add-on">
+		<Copy></Copy>
+		<CopyText></CopyText>
+		<ActiveXProgramID><![CDATA[ngaus.childpagelistclass]]></ActiveXProgramID>
+		<DotNetClass></DotNetClass>
+		<ArgumentList></ArgumentList>
+		<AsAjax>No</AsAjax>
+		<Filter>No</Filter>
+		<Help></Help>
+		<HelpLink></HelpLink>
+		<Icon Link="" width="0" height="0" sprites="0" />
+		<InIframe>No</InIframe>
+		<BlockEditTools>No</BlockEditTools>
+		<FormXML></FormXML>
+		<IsInline>No</IsInline>
+		<JavascriptOnLoad></JavascriptOnLoad>
+		<JavascriptInHead></JavascriptInHead>
+		<JavascriptBodyEnd></JavascriptBodyEnd>
+		<MetaDescription></MetaDescription>
+		<OtherHeadTags></OtherHeadTags>
+		<Content>Yes</Content>
+		<Template>Yes</Template>
+		<Admin>Yes</Admin>
+		<OnPageEndEvent>No</OnPageEndEvent>
+		<OnPageStartEvent>No</OnPageStartEvent>
+		<OnBodyStart>No</OnBodyStart>
+		<OnBodyEnd>No</OnBodyEnd>
+		<RemoteMethod>No</RemoteMethod>
+		<ProcessRunOnce>No</ProcessRunOnce>
+		<ProcessInterval>0</ProcessInterval>
+		<PageTitle></PageTitle>
+		<RemoteAssetLink></RemoteAssetLink>
+		<Styles></Styles>
+		<Scripting Language="" EntryPoint="" Timeout="5000"/>
+	</Addon>
+	<Addon name="Corp Join" guid="{5966480F-E651-4D6D-B315-88796505A292}" type="Add-on">
+		<Copy></Copy>
+		<CopyText></CopyText>
+		<ActiveXProgramID><![CDATA[ngaus.corporatejoinclass]]></ActiveXProgramID>
+		<DotNetClass></DotNetClass>
+		<ArgumentList></ArgumentList>
+		<AsAjax>No</AsAjax>
+		<Filter>No</Filter>
+		<Help></Help>
+		<HelpLink></HelpLink>
+		<Icon Link="" width="0" height="0" sprites="0" />
+		<InIframe>No</InIframe>
+		<BlockEditTools>No</BlockEditTools>
+		<FormXML></FormXML>
+		<IsInline>No</IsInline>
+		<JavascriptOnLoad></JavascriptOnLoad>
+		<JavascriptInHead></JavascriptInHead>
+		<JavascriptBodyEnd></JavascriptBodyEnd>
+		<MetaDescription></MetaDescription>
+		<OtherHeadTags></OtherHeadTags>
+		<Content>Yes</Content>
+		<Template>Yes</Template>
+		<Admin>Yes</Admin>
+		<OnPageEndEvent>No</OnPageEndEvent>
+		<OnPageStartEvent>No</OnPageStartEvent>
+		<OnBodyStart>No</OnBodyStart>
+		<OnBodyEnd>No</OnBodyEnd>
+		<RemoteMethod>No</RemoteMethod>
+		<ProcessRunOnce>No</ProcessRunOnce>
+		<ProcessInterval>0</ProcessInterval>
+		<PageTitle></PageTitle>
+		<RemoteAssetLink></RemoteAssetLink>
+		<Styles></Styles>
+		<Scripting Language="" EntryPoint="" Timeout="5000"/>
+	</Addon>
+	<Addon name="Corporate Directory" guid="{A03F53AE-3B88-451F-8BF2-CC074F5179B4}" type="Add-on">
+		<Copy></Copy>
+		<CopyText></CopyText>
+		<ActiveXProgramID><![CDATA[ngaus.corporatedirectoryclass]]></ActiveXProgramID>
+		<DotNetClass></DotNetClass>
+		<ArgumentList></ArgumentList>
+		<AsAjax>No</AsAjax>
+		<Filter>No</Filter>
+		<Help></Help>
+		<HelpLink></HelpLink>
+		<Icon Link="" width="0" height="0" sprites="0" />
+		<InIframe>No</InIframe>
+		<BlockEditTools>No</BlockEditTools>
+		<FormXML></FormXML>
+		<IsInline>No</IsInline>
+		<JavascriptOnLoad></JavascriptOnLoad>
+		<JavascriptInHead></JavascriptInHead>
+		<JavascriptBodyEnd></JavascriptBodyEnd>
+		<MetaDescription></MetaDescription>
+		<OtherHeadTags></OtherHeadTags>
+		<Content>Yes</Content>
+		<Template>Yes</Template>
+		<Admin>Yes</Admin>
+		<OnPageEndEvent>No</OnPageEndEvent>
+		<OnPageStartEvent>No</OnPageStartEvent>
+		<OnBodyStart>No</OnBodyStart>
+		<OnBodyEnd>No</OnBodyEnd>
+		<RemoteMethod>No</RemoteMethod>
+		<ProcessRunOnce>No</ProcessRunOnce>
+		<ProcessInterval>0</ProcessInterval>
+		<PageTitle></PageTitle>
+		<RemoteAssetLink></RemoteAssetLink>
+		<Styles></Styles>
+		<Scripting Language="" EntryPoint="" Timeout="5000"/>
+	</Addon>
+	<Addon name="Directory Search" guid="{C964E6B7-34EF-4422-A4E9-C5497603C56B}" type="Add-on">
+		<Copy></Copy>
+		<CopyText></CopyText>
+		<ActiveXProgramID><![CDATA[ngaus.DirectoryClass]]></ActiveXProgramID>
+		<DotNetClass></DotNetClass>
+		<ArgumentList></ArgumentList>
+		<AsAjax>No</AsAjax>
+		<Filter>No</Filter>
+		<Help></Help>
+		<HelpLink></HelpLink>
+		<Icon Link="" width="0" height="0" sprites="0" />
+		<InIframe>No</InIframe>
+		<BlockEditTools>No</BlockEditTools>
+		<FormXML></FormXML>
+		<IsInline>No</IsInline>
+		<JavascriptOnLoad></JavascriptOnLoad>
+		<JavascriptInHead></JavascriptInHead>
+		<JavascriptBodyEnd></JavascriptBodyEnd>
+		<MetaDescription></MetaDescription>
+		<OtherHeadTags></OtherHeadTags>
+		<Content>Yes</Content>
+		<Template>Yes</Template>
+		<Admin>Yes</Admin>
+		<OnPageEndEvent>No</OnPageEndEvent>
+		<OnPageStartEvent>No</OnPageStartEvent>
+		<OnBodyStart>No</OnBodyStart>
+		<OnBodyEnd>No</OnBodyEnd>
+		<RemoteMethod>No</RemoteMethod>
+		<ProcessRunOnce>No</ProcessRunOnce>
+		<ProcessInterval>0</ProcessInterval>
+		<PageTitle></PageTitle>
+		<RemoteAssetLink></RemoteAssetLink>
+		<Styles></Styles>
+		<Scripting Language="" EntryPoint="" Timeout="5000"/>
+	</Addon>
+	<Addon name="Magazine Subscriptions" guid="{3E560B35-AF17-49EA-BB0E-D2DCE514265F}" type="Add-on">
+		<Copy></Copy>
+		<CopyText></CopyText>
+		<ActiveXProgramID><![CDATA[ngaus.SubscriptionClass]]></ActiveXProgramID>
+		<DotNetClass></DotNetClass>
+		<ArgumentList></ArgumentList>
+		<AsAjax>No</AsAjax>
+		<Filter>No</Filter>
+		<Help></Help>
+		<HelpLink></HelpLink>
+		<Icon Link="" width="0" height="0" sprites="0" />
+		<InIframe>No</InIframe>
+		<BlockEditTools>No</BlockEditTools>
+		<FormXML></FormXML>
+		<IsInline>No</IsInline>
+		<JavascriptOnLoad></JavascriptOnLoad>
+		<JavascriptInHead></JavascriptInHead>
+		<JavascriptBodyEnd></JavascriptBodyEnd>
+		<MetaDescription></MetaDescription>
+		<OtherHeadTags></OtherHeadTags>
+		<Content>Yes</Content>
+		<Template>Yes</Template>
+		<Admin>Yes</Admin>
+		<OnPageEndEvent>No</OnPageEndEvent>
+		<OnPageStartEvent>No</OnPageStartEvent>
+		<OnBodyStart>No</OnBodyStart>
+		<OnBodyEnd>No</OnBodyEnd>
+		<RemoteMethod>No</RemoteMethod>
+		<ProcessRunOnce>No</ProcessRunOnce>
+		<ProcessInterval>0</ProcessInterval>
+		<PageTitle></PageTitle>
+		<RemoteAssetLink></RemoteAssetLink>
+		<Styles></Styles>
+		<Scripting Language="" EntryPoint="" Timeout="5000"/>
+	</Addon>
+	<Addon name="Membership Application" guid="{7E65D915-A975-4487-8D4D-19AF5CA24654}" type="Add-on">
+		<Copy></Copy>
+		<CopyText></CopyText>
+		<ActiveXProgramID><![CDATA[ngaus.MembershipClass]]></ActiveXProgramID>
+		<DotNetClass></DotNetClass>
+		<ArgumentList></ArgumentList>
+		<AsAjax>No</AsAjax>
+		<Filter>No</Filter>
+		<Help></Help>
+		<HelpLink></HelpLink>
+		<Icon Link="" width="0" height="0" sprites="0" />
+		<InIframe>No</InIframe>
+		<BlockEditTools>No</BlockEditTools>
+		<FormXML></FormXML>
+		<IsInline>No</IsInline>
+		<JavascriptOnLoad></JavascriptOnLoad>
+		<JavascriptInHead></JavascriptInHead>
+		<JavascriptBodyEnd></JavascriptBodyEnd>
+		<MetaDescription></MetaDescription>
+		<OtherHeadTags></OtherHeadTags>
+		<Content>Yes</Content>
+		<Template>Yes</Template>
+		<Admin>Yes</Admin>
+		<OnPageEndEvent>No</OnPageEndEvent>
+		<OnPageStartEvent>No</OnPageStartEvent>
+		<OnBodyStart>No</OnBodyStart>
+		<OnBodyEnd>No</OnBodyEnd>
+		<RemoteMethod>No</RemoteMethod>
+		<ProcessRunOnce>No</ProcessRunOnce>
+		<ProcessInterval>0</ProcessInterval>
+		<PageTitle></PageTitle>
+		<RemoteAssetLink></RemoteAssetLink>
+		<Styles></Styles>
+		<Scripting Language="" EntryPoint="" Timeout="5000"/>
+	</Addon>
+	<Addon name="Membership Card" guid="{2A74FE71-8DB8-4536-B628-27230CAA1FE6}" type="Add-on">
+		<Copy></Copy>
+		<CopyText></CopyText>
+		<ActiveXProgramID><![CDATA[ngaus.memCrd]]></ActiveXProgramID>
+		<DotNetClass></DotNetClass>
+		<ArgumentList></ArgumentList>
+		<AsAjax>No</AsAjax>
+		<Filter>No</Filter>
+		<Help></Help>
+		<HelpLink></HelpLink>
+		<Icon Link="" width="0" height="0" sprites="0" />
+		<InIframe>No</InIframe>
+		<BlockEditTools>No</BlockEditTools>
+		<FormXML></FormXML>
+		<IsInline>No</IsInline>
+		<JavascriptOnLoad></JavascriptOnLoad>
+		<JavascriptInHead></JavascriptInHead>
+		<JavascriptBodyEnd></JavascriptBodyEnd>
+		<MetaDescription></MetaDescription>
+		<OtherHeadTags></OtherHeadTags>
+		<Content>Yes</Content>
+		<Template>No</Template>
+		<Admin>Yes</Admin>
+		<OnPageEndEvent>No</OnPageEndEvent>
+		<OnPageStartEvent>No</OnPageStartEvent>
+		<OnBodyStart>No</OnBodyStart>
+		<OnBodyEnd>No</OnBodyEnd>
+		<RemoteMethod>No</RemoteMethod>
+		<ProcessRunOnce>No</ProcessRunOnce>
+		<ProcessInterval>0</ProcessInterval>
+		<PageTitle></PageTitle>
+		<RemoteAssetLink></RemoteAssetLink>
+		<Styles><![CDATA[.cardLayout{
+				border-spacing:0px;
+				padding:0px;
+				margin:0px;
+}
+.foldData{
+						z-index:99;
+						width:2in;
+						background-color:transparent;
+						position:absolute;
+						margin:35px 5px 0px 140px;
+						font-face:Lucida Sans;
+}
+.foldData h1{
+						margin:0px 0px 2px 0px;
+						font-size:9pt;
+						font-weight:bold;
+						font-face:Lucida Sans;
+}
+.foldData p{
+						margin:0px;
+}
+.cardLeft{
+						border:1px dashed #000000;
+						border-right:1px solid #000000;
+						height:2in;
+						width:3.5in;
+						float:left;
+				padding:0px;
+				margin:0px;
+}
+.cardRight{
+						border:1px dashed #000000;
+						border-left:0px;
+						border-left:0px;
+						height:2in;
+						width:3.5in;
+						float:left;
+						text-align:center;
+						font-face:Lucida Sans;
+						background-color:#FFFFFF;
+				padding:0px;
+				margin:0px;
+}
+.cardRight p{
+						font-size:7pt;
+						margin:0px;
+						font-face:Lucida Sans;
+}
+.cardRight img{
+						margin:10px 0px 10px 0px;
+}
+p.memType{
+						font-size:8pt;
+					margin:8px 0px 0px 0px;
+						font-face:Lucida Sans;
+}
+p.memID{
+						font-size:8pt;
+					margin:8px 0px 0px 0px;
+						font-face:Lucida Sans;
+}
+p.memStates{
+						font-size:8pt;
+					margin:8px 0px 0px 0px;
+						font-face:Lucida Sans;
+}]]></Styles>
+		<Scripting Language="" EntryPoint="" Timeout="5000"/>
+	</Addon>
+	<Addon name="NGAUS Log In" guid="{FFD9109A-9F31-4E7D-B6B9-66DF26985371}" type="Add-on">
+		<Copy></Copy>
+		<CopyText></CopyText>
+		<ActiveXProgramID><![CDATA[ngaus.loginclass]]></ActiveXProgramID>
+		<DotNetClass></DotNetClass>
+		<ArgumentList></ArgumentList>
+		<AsAjax>No</AsAjax>
+		<Filter>No</Filter>
+		<Help></Help>
+		<HelpLink></HelpLink>
+		<Icon Link="" width="0" height="0" sprites="0" />
+		<InIframe>No</InIframe>
+		<BlockEditTools>No</BlockEditTools>
+		<FormXML></FormXML>
+		<IsInline>No</IsInline>
+		<JavascriptOnLoad></JavascriptOnLoad>
+		<JavascriptInHead></JavascriptInHead>
+		<JavascriptBodyEnd></JavascriptBodyEnd>
+		<MetaDescription></MetaDescription>
+		<OtherHeadTags></OtherHeadTags>
+		<Content>Yes</Content>
+		<Template>Yes</Template>
+		<Admin>Yes</Admin>
+		<OnPageEndEvent>No</OnPageEndEvent>
+		<OnPageStartEvent>No</OnPageStartEvent>
+		<OnBodyStart>No</OnBodyStart>
+		<OnBodyEnd>No</OnBodyEnd>
+		<RemoteMethod>No</RemoteMethod>
+		<ProcessRunOnce>No</ProcessRunOnce>
+		<ProcessInterval>0</ProcessInterval>
+		<PageTitle></PageTitle>
+		<RemoteAssetLink></RemoteAssetLink>
+		<Styles></Styles>
+		<Scripting Language="" EntryPoint="" Timeout="5000"/>
+	</Addon>
+	<Addon name="Press Signup Form" guid="{479633B5-C5AD-4349-925C-19241DA1C3E8}" type="Add-on">
+		<Copy></Copy>
+		<CopyText></CopyText>
+		<ActiveXProgramID><![CDATA[ngaus.presssignupclass]]></ActiveXProgramID>
+		<DotNetClass></DotNetClass>
+		<ArgumentList></ArgumentList>
+		<AsAjax>No</AsAjax>
+		<Filter>No</Filter>
+		<Help></Help>
+		<HelpLink></HelpLink>
+		<Icon Link="" width="0" height="0" sprites="0" />
+		<InIframe>No</InIframe>
+		<BlockEditTools>No</BlockEditTools>
+		<FormXML></FormXML>
+		<IsInline>No</IsInline>
+		<JavascriptOnLoad></JavascriptOnLoad>
+		<JavascriptInHead></JavascriptInHead>
+		<JavascriptBodyEnd></JavascriptBodyEnd>
+		<MetaDescription></MetaDescription>
+		<OtherHeadTags></OtherHeadTags>
+		<Content>Yes</Content>
+		<Template>Yes</Template>
+		<Admin>Yes</Admin>
+		<OnPageEndEvent>No</OnPageEndEvent>
+		<OnPageStartEvent>No</OnPageStartEvent>
+		<OnBodyStart>No</OnBodyStart>
+		<OnBodyEnd>No</OnBodyEnd>
+		<RemoteMethod>No</RemoteMethod>
+		<ProcessRunOnce>No</ProcessRunOnce>
+		<ProcessInterval>0</ProcessInterval>
+		<PageTitle></PageTitle>
+		<RemoteAssetLink></RemoteAssetLink>
+		<Styles></Styles>
+		<Scripting Language="" EntryPoint="" Timeout="5000"/>
+	</Addon>
+	<Addon name="Profile Form" guid="{D3E3CF88-1456-42AD-9433-6C3B135AD64B}" type="Add-on">
+		<Copy></Copy>
+		<CopyText></CopyText>
+		<ActiveXProgramID><![CDATA[ngaus.profileclass]]></ActiveXProgramID>
+		<DotNetClass></DotNetClass>
+		<ArgumentList></ArgumentList>
+		<AsAjax>No</AsAjax>
+		<Filter>No</Filter>
+		<Help></Help>
+		<HelpLink></HelpLink>
+		<Icon Link="" width="0" height="0" sprites="0" />
+		<InIframe>No</InIframe>
+		<BlockEditTools>No</BlockEditTools>
+		<FormXML></FormXML>
+		<IsInline>No</IsInline>
+		<JavascriptOnLoad></JavascriptOnLoad>
+		<JavascriptInHead></JavascriptInHead>
+		<JavascriptBodyEnd></JavascriptBodyEnd>
+		<MetaDescription></MetaDescription>
+		<OtherHeadTags></OtherHeadTags>
+		<Content>Yes</Content>
+		<Template>Yes</Template>
+		<Admin>No</Admin>
+		<OnPageEndEvent>No</OnPageEndEvent>
+		<OnPageStartEvent>No</OnPageStartEvent>
+		<OnBodyStart>No</OnBodyStart>
+		<OnBodyEnd>No</OnBodyEnd>
+		<RemoteMethod>No</RemoteMethod>
+		<ProcessRunOnce>No</ProcessRunOnce>
+		<ProcessInterval>0</ProcessInterval>
+		<PageTitle></PageTitle>
+		<RemoteAssetLink></RemoteAssetLink>
+		<Styles></Styles>
+		<Scripting Language="" EntryPoint="" Timeout="5000"/>
+	</Addon>
+	<Addon name="Rotating Banner Images" guid="{DA069F8E-AC82-4F34-9C34-C3835D52427F}" type="Add-on">
+		<Copy></Copy>
+		<CopyText></CopyText>
+		<ActiveXProgramID><![CDATA[ngaus.rotatingimageclass]]></ActiveXProgramID>
+		<DotNetClass></DotNetClass>
+		<ArgumentList></ArgumentList>
+		<AsAjax>No</AsAjax>
+		<Filter>No</Filter>
+		<Help></Help>
+		<HelpLink></HelpLink>
+		<Icon Link="" width="0" height="0" sprites="0" />
+		<InIframe>No</InIframe>
+		<BlockEditTools>No</BlockEditTools>
+		<FormXML></FormXML>
+		<IsInline>No</IsInline>
+		<JavascriptOnLoad></JavascriptOnLoad>
+		<JavascriptInHead></JavascriptInHead>
+		<JavascriptBodyEnd></JavascriptBodyEnd>
+		<MetaDescription></MetaDescription>
+		<OtherHeadTags></OtherHeadTags>
+		<Content>Yes</Content>
+		<Template>Yes</Template>
+		<Admin>Yes</Admin>
+		<OnPageEndEvent>No</OnPageEndEvent>
+		<OnPageStartEvent>No</OnPageStartEvent>
+		<OnBodyStart>No</OnBodyStart>
+		<OnBodyEnd>No</OnBodyEnd>
+		<RemoteMethod>No</RemoteMethod>
+		<ProcessRunOnce>No</ProcessRunOnce>
+		<ProcessInterval>0</ProcessInterval>
+		<PageTitle></PageTitle>
+		<RemoteAssetLink></RemoteAssetLink>
+		<Styles></Styles>
+		<Scripting Language="" EntryPoint="" Timeout="5000"/>
+	</Addon>
+	<Addon name="Site Registration" guid="{B6FE1670-D9D2-4A14-9245-FE5E94763213}" type="Add-on">
+		<Copy></Copy>
+		<CopyText></CopyText>
+		<ActiveXProgramID><![CDATA[ngaus.registrationclass]]></ActiveXProgramID>
+		<DotNetClass></DotNetClass>
+		<ArgumentList></ArgumentList>
+		<AsAjax>No</AsAjax>
+		<Filter>No</Filter>
+		<Help></Help>
+		<HelpLink></HelpLink>
+		<Icon Link="" width="0" height="0" sprites="0" />
+		<InIframe>No</InIframe>
+		<BlockEditTools>No</BlockEditTools>
+		<FormXML></FormXML>
+		<IsInline>No</IsInline>
+		<JavascriptOnLoad></JavascriptOnLoad>
+		<JavascriptInHead></JavascriptInHead>
+		<JavascriptBodyEnd></JavascriptBodyEnd>
+		<MetaDescription></MetaDescription>
+		<OtherHeadTags></OtherHeadTags>
+		<Content>Yes</Content>
+		<Template>Yes</Template>
+		<Admin>Yes</Admin>
+		<OnPageEndEvent>No</OnPageEndEvent>
+		<OnPageStartEvent>No</OnPageStartEvent>
+		<OnBodyStart>No</OnBodyStart>
+		<OnBodyEnd>No</OnBodyEnd>
+		<RemoteMethod>No</RemoteMethod>
+		<ProcessRunOnce>No</ProcessRunOnce>
+		<ProcessInterval>0</ProcessInterval>
+		<PageTitle></PageTitle>
+		<RemoteAssetLink></RemoteAssetLink>
+		<Styles></Styles>
+		<Scripting Language="" EntryPoint="" Timeout="5000"/>
+	</Addon>
+	<Resource name="mcbackbg.jpg" type="content" path="upload" />
+	<Resource name="mclogo.jpg" type="content" path="upload" />
+	<Resource name="ngaus.dll" type="executable" path="" />
+</Collection>

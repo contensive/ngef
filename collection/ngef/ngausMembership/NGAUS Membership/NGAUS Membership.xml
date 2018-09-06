@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<Collection name="NGAUS Membership" guid="{A326E83F-B8F4-402D-8A2D-58C582BCF76E}" system="No" updatable="Yes" blockNavigatorNode="No">
+	<HelpLink></HelpLink>
+	<Help></Help>
+	<Addon name="Join NGAUS - NVNGA Form" guid="{4A1386F3-5F0F-41B0-9378-AD1341EAE91A}" type="Add-on">
+		<Copy></Copy>
+		<CopyText></CopyText>
+		<ActiveXProgramID></ActiveXProgramID>
+		<DotNetClass><![CDATA[Contensive.Addons.ngausMembership.joinFormClass]]></DotNetClass>
+		<ArgumentList></ArgumentList>
+		<AsAjax>No</AsAjax>
+		<Filter>No</Filter>
+		<Help></Help>
+		<HelpLink></HelpLink>
+		<Icon Link="" width="0" height="0" sprites="0" />
+		<InIframe>No</InIframe>
+		<BlockEditTools>No</BlockEditTools>
+		<FormXML></FormXML>
+		<IncludeAddon name="JQuery" guid="{9C882078-0DAC-48E3-AD4B-CF2AA230DF80}"/>
+		<IsInline>No</IsInline>
+		<JavascriptOnLoad></JavascriptOnLoad>
+		<JavascriptInHead><![CDATA[jQuery(document).ready(function(){
+	populateYearSelect();
+	jQuery('#ngSignupForm').submit(function(){
+		var flag='';
+		flag+=ngIsRequired('#phoneNumber input');
+		flag+=ngIsRequired('#zip input');
+		flag+=ngIsRequired('#state input');
+		flag+=ngIsRequired('#city input');
+		flag+=ngIsRequired('#mailingAddress input');
+		flag+=ngIsEmail('#email input');
+		flag+=ngIsRequired('#lastName input');
+		flag+=ngIsRequired('#firstName input');
+		flag+=ngIsRequired('#rank input');
+		if(flag!='')
+		{
+			alert('One or more required fields are missing or invalid. Please complete the highlighted fields and submit again.');
+			return false;
+		}
+	});
+	jQuery('input[value="Make Payment"]').click(function(e){
+		var flag='';
+		flag+=ngIsRequired('#cardNumber input');
+		flag+=ngIsRequired('#cardCVV input');
+		if(flag!='')
+		{
+			alert('One or more required fields are missing. Please complete the highlighted fields and submit again.');
+			e.preventDefault();
+			return false;
+		}
+	});
+	/*
+	jQuery('#ngPayForm').submit(function(){
+		var flag='';
+		flag+=ngIsRequired('#cardNumber input');
+		flag+=ngIsRequired('#cardCVV input');
+		if(flag!='')
+		{
+			alert('One or more required fields are missing. Please complete the highlighted fields and submit again.');
+			return false;
+		}
+	});
+	*/
+});
+
+function ngIsRequired( selector ) 
+{
+	if (jQuery(selector).val()=='')
+	{
+		//jQuery(selector).css( 'border-color', '#f00' );
+		jQuery(selector).css( 'background-color', '#f0f890' );
+		jQuery(selector).focus();
+		return 'no';
+	} else {
+		//jQuery(selector).css( 'border-color', '#888' );
+		jQuery(selector).css( 'background-color', '#fff' );
+		return '';
+	}
+}
+function ngIsEmail( selector ) 
+{
+	var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+        var emailaddressVal = jQuery(selector).val();
+	if (emailaddressVal=='')
+	{
+		//jQuery(selector).css( 'border-color', '#f00' );
+		jQuery(selector).css( 'background-color', '#f0f890' );
+		jQuery(selector).focus();
+		return 'no';
+	} else if(!emailReg.test(emailaddressVal)) {
+		//jQuery(selector).css( 'border-color', '#f00' );
+		jQuery(selector).css( 'background-color', '#f0f890' );
+		jQuery(selector).focus();
+		return 'no';
+	} else {
+		//jQuery(selector).css( 'border-color', '#888' );
+		jQuery(selector).css( 'background-color', '#fff' );
+		return '';
+	}
+}
+
+function populateYearSelect() 
+{ 
+	var d,i,y,e;
+	e=document.getElementById('ngYearSelect');
+	if(e)
+	{
+		d = new Date(); 
+ 		y = d.getFullYear(); 
+	 	for(i = 0; i < 9; i++) 
+		{ 
+			e.options[i] = new Option(y+i,y+i); 
+		}
+	}
+} 
+
+
+
+]]></JavascriptInHead>
+		<JavascriptBodyEnd></JavascriptBodyEnd>
+		<MetaDescription></MetaDescription>
+		<OtherHeadTags></OtherHeadTags>
+		<Content>Yes</Content>
+		<Template>No</Template>
+		<Admin>Yes</Admin>
+		<OnPageEndEvent>No</OnPageEndEvent>
+		<OnPageStartEvent>No</OnPageStartEvent>
+		<OnBodyStart>No</OnBodyStart>
+		<OnBodyEnd>No</OnBodyEnd>
+		<RemoteMethod>No</RemoteMethod>
+		<ProcessRunOnce>No</ProcessRunOnce>
+		<ProcessInterval>0</ProcessInterval>
+		<PageTitle></PageTitle>
+		<RemoteAssetLink></RemoteAssetLink>
+		<Styles><![CDATA[
+.ngSignup 
+{
+}
+div.ngSignup 
+{
+	width: 400px;
+	padding: 20px;
+	background-color: white;
+}
+.ngSignup div.formRow 
+{
+	padding: 10px 0 0 0;
+	clear: both;
+}
+.ngSignup .formRow div.rowName
+{
+	display: block;
+	height: 15px;
+	width: 140px;
+	float: left;
+	text-align: right;
+	padding: 10px 0;
+	vertical-align: middle;
+}
+.ngSignup .formRow div.rowConfirm
+{
+	display: block;
+	/* height: 15px; */
+	margin: 0 0 0 150px;
+	text-align: left;
+	padding: 10px 0;
+	vertical-align: middle;
+	font-weight: bold;
+}
+.ngSignup .formRow div.rowValue
+{
+	display: block;
+	margin: 0 0 0 150px;
+	vertical-align: middle;
+	padding: 0;
+	height: 27px;
+}
+.ngSignup .formRow input
+{
+	padding: 5px;
+	height: 33px;
+	border: 1px solid #888;
+	border-radius: 3px;
+}
+.ngSignup p.footerRow
+{
+	padding: 5px 0 5px 20px;
+}
+.ngSignup .buttonRow
+{
+	text-align: left;
+	padding: 20px 0 20px 150px;
+}
+.ngSignup .buttonRow input
+{
+	padding: 4px 10px;
+	border: 1px solid #888;
+	border-radius: 3px;
+	cursor: pointer;
+}
+.ngSignup .formRow select
+{
+	padding: 7px;
+	height: 35px;
+	border: 1px solid #888;
+	border-radius: 3px;
+}
+
+
+
+
+
+
+]]></Styles>
+		<Scripting Language="" EntryPoint="" Timeout="5000"/>
+	</Addon>
+	<data>
+		<record content="layouts" guid="{42BBCC81-8141-4722-A1A3-73532947A604}" name="Online Membership Signup">
+			<field name="ACTIVE">True</field>
+			<field name="SORTORDER"></field>
+			<field name="Layout"><![CDATA[<div class="ngSignup" id="">
+	<h1>Join NGAUS &amp; NVNGA</h1>
+	<h2>Online Membership Application</h2>
+	<div id="ngDescription">
+	</div>
+	<form method="post" action="#" id="ngSignupForm">
+	<div class="formRow" id="rank">
+		<div class="rowName">Rank*</div>
+		<div class="rowValue"><input height="15" type="text" name="rank" value="" class=""></div>
+	</div>
+	<div class="formRow" id="unit">
+		<div class="rowName">Unit</div>
+		<div class="rowValue"><input type="text" name="unit" value="" class=""></div>
+	</div>
+	<div class="formRow" id="firstName">
+		<div class="rowName">First Name*</div>
+		<div class="rowValue"><input type="text" name="firstName" value="" class=""></div>
+	</div>
+	<div class="formRow" id="middleInitial">
+		<div class="rowName">Middle Initial</div>
+		<div class="rowValue"><input type="text" name="middleInitial" value="" class=""></div>
+	</div>
+	<div class="formRow" id="lastName">
+		<div class="rowName">Last Name*</div>
+		<div class="rowValue"><input type="text" name="lastName" value="" class=""></div>
+	</div>
+	<div class="formRow"  id="suffix">
+		<div class="rowName">Suffix</div>
+		<div class="rowValue"><input type="text" name="suffix" value="" class=""></div>
+	</div>
+	<div class="formRow" id="email">
+		<div class="rowName">E-mail*</div>
+		<div class="rowValue"><input type="text" name="email" value="" class=""></div>
+	</div>
+	<div class="formRow" id="mailingAddress">
+		<div class="rowName">Mailing Address*</div>
+		<div class="rowValue"><input type="text" name="mailingAddress" value="" class=""></div>
+	</div>
+	<div class="formRow" id="city">
+		<div class="rowName">City*</div>
+		<div class="rowValue"><input type="text" name="city" value="" class=""></div>
+	</div>
+	<div class="formRow" id="state">
+		<div class="rowName">State*</div>
+		<div class="rowValue"><input type="text" name="state" value="" class=""></div>
+	</div>
+	<div class="formRow" id="zip">
+		<div class="rowName">Zip*</div>
+		<div class="rowValue"><input type="text" name="zip" value="" class=""></div>
+	</div>
+	<div class="formRow" id="phoneNumber">
+		<div class="rowName">Phone Number*</div>
+		<div class="rowValue"><input type="text" name="phoneNumber" value="" class=""></div>
+	</div>
+	<div class="formRow" id="membershipLevel">
+		<div class="rowName">Membership Level*</div>
+		<div class="rowValue">
+			<select name="membershipLevel" id="membershipLevelSelect">
+				<option value="Membership A">Membership A ($10.00)</option>
+				<option value="Membership B">Membership B ($20.00)</option>
+				<option value="Membership C">Membership C ($30.00)</option>
+			</select>
+		</div>
+	</div>
+	<div class="buttonRow">
+		<input type="submit" name="button" value="Next">
+	</div>
+	<p class="footerRow">* Required Fields</div>
+	</form>
+</div>
+
+
+
+
+
+
+]]></field>
+			<field name="StylesFilename"></field>
+		</record>
+		<record content="layouts" guid="{3D83D712-6555-493A-B8C9-63A8467B1A56}" name="Online Membership Confirm">
+			<field name="ACTIVE">True</field>
+			<field name="SORTORDER"></field>
+			<field name="Layout"><![CDATA[<div class="ngSignup" id="">
+	<h1>Join NGAUS &amp; NVNGA</h1>
+	<h2>Online Membership Application - Profile Confirmation</h2>
+	<div id="ngDescription">
+	</div>
+	<form method="post" action="#" id="ngForm">
+	<div class="formRow" id="rank">
+		<div class="rowName">Rank</div>
+		<div class="rowConfirm"></div>
+	</div>
+	<div class="formRow" id="unit">
+		<div class="rowName">Unit</div>
+		<div class="rowConfirm"></div>
+	</div>
+	<div class="formRow" id="firstName">
+		<div class="rowName">First Name</div>
+		<div class="rowConfirm"></div>
+	</div>
+	<div class="formRow" id="middleInitial">
+		<div class="rowName">Middle Initial</div>
+		<div class="rowConfirm"></div>
+	</div>
+	<div class="formRow" id="lastName">
+		<div class="rowName">Last Name</div>
+		<div class="rowConfirm"></div>
+	</div>
+	<div class="formRow"  id="suffix">
+		<div class="rowName">Suffix</div>
+		<div class="rowConfirm"></div>
+	</div>
+	<div class="formRow" id="email">
+		<div class="rowName">E-mail</div>
+		<div class="rowConfirm"></div>
+	</div>
+	<div class="formRow" id="mailingAddress">
+		<div class="rowName">Mailing Address</div>
+		<div class="rowConfirm"></div>
+	</div>
+	<div class="formRow" id="city">
+		<div class="rowName">City</div>
+		<div class="rowConfirm"></div>
+	</div>
+	<div class="formRow" id="state">
+		<div class="rowName">State</div>
+		<div class="rowConfirm"></div>
+	</div>
+	<div class="formRow" id="zip">
+		<div class="rowName">Zip</div>
+		<div class="rowConfirm"></div>
+	</div>
+	<div class="formRow" id="phoneNumber">
+		<div class="rowName">Phone Number</div>
+		<div class="rowConfirm"></div>
+	</div>
+	<div class="formRow" id="membershipLevel">
+		<div class="rowName">Membership Level</div>
+		<div class="rowConfirm"></div>
+	</div>
+	<div class="buttonRow">
+		<input type="submit" name="button" value="Edit">
+		<input type="submit" name="button" value="Next">
+	</div>
+	</form>
+</div>
+
+
+
+
+
+
+]]></field>
+			<field name="StylesFilename"></field>
+		</record>
+		<record content="layouts" guid="{663B7845-44C4-484F-B90B-BF53DC5079D6}" name="Online Membership Pay">
+			<field name="ACTIVE">True</field>
+			<field name="SORTORDER"></field>
+			<field name="Layout"><![CDATA[<div class="ngSignup" id="">
+	<h1>Join NGAUS &amp; NVNGA</h1>
+	<h2>Online Membership Application</h2>
+	<div id="ngDescription">
+	</div>
+	<form method="post" action="#" id="ngPayForm">
+		<div class="formRow" id="amount">
+			<div class="rowName">Amount</div>
+			<div class="rowConfirm"></div>
+		</div>
+		<div class="formRow" id="cardNumber">
+			<div class="rowName">Card Number</div>
+			<div class="rowValue"><input height="15" type="text" name="cardNumber" value="" class=""></div>
+		</div>
+		<div class="formRow" id="cardExpiration">
+			<div class="rowName">Expiration</div>
+			<div class="rowValue">
+				<select name="cardExpirationMonth">
+					<option>1</option>
+					<option>2</option>
+					<option>3</option>
+					<option>4</option>
+					<option>5</option>
+					<option>6</option>
+					<option>7</option>
+					<option>8</option>
+					<option>9</option>
+					<option>10</option>
+					<option>11</option>
+					<option>12</option>
+				</select>
+				<select name="cardExpirationYear" id="ngYearSelect">
+					<option>2012</option>
+					<option>2013</option>
+					<option>2014</option>
+					<option>2015</option>
+					<option>2016</option>
+					<option>2017</option>
+					<option>2018</option>
+					<option>2019</option>
+					<option>2020</option>
+				</select>
+			</div>
+		</div>
+		<div class="formRow" id="cardCVV">
+			<div class="rowName">CVV code</div>
+			<div class="rowValue"><input height="15" type="text" name="cardCVV" value="" class=""></div>
+		</div>
+		<div class="buttonRow">
+			<input type="submit" name="button" value="Edit">
+			<input type="submit" name="button" value="Make Payment">
+		</div>
+	</form>
+</div>
+
+
+
+
+
+
+]]></field>
+			<field name="StylesFilename"></field>
+		</record>
+		<record content="layouts" guid="{0876A5DF-C795-4BA0-BAD9-393AB7018E9D}" name="Online Membership Thank You">
+			<field name="ACTIVE">True</field>
+			<field name="SORTORDER"></field>
+			<field name="Layout"><![CDATA[<div class="ngSignup" id="">
+	<h1>Join NGAUS &amp; NVNGA</h1>
+	<h2>Online Membership Application</h2>
+	<div id="ngDescription">
+		<p>Thank You.</p>
+	</div>
+</div>]]></field>
+			<field name="StylesFilename"></field>
+		</record>
+	</data>
+	<CDef Name="Ngaus Join Applications" Active="1" AdminOnly="0" AllowAdd="1" AllowCalendarEvents="0" AllowContentChildTool="0" AllowContentTracking="0" AllowDelete="1" AllowMetaContent="0" AllowTopicRules="0" AllowWorkflowAuthoring="0" AuthoringDataSourceName="Default" AuthoringTableName="NgausJoinApplications" ContentDataSourceName="Default" ContentTableName="NgausJoinApplications" DefaultSortMethod="" DeveloperOnly="0" DropDownFieldList="Name" EditorGroupName="Content Editors" Parent="" IconLink="" IconHeight="0" IconWidth="0" IconSprites="0" isbasecontent="" guid="{196B89AA-C70A-488D-98F0-9580E8EB9376}" >
+		<Field Name="Name" active="True" AdminOnly="False" Authorable="True" Caption="Name" DeveloperOnly="False" EditSortPriority="110" FieldType="Text" HTMLContent="False" IndexColumn="10" IndexSortDirection="1" IndexSortOrder="99" IndexWidth="56" RedirectID="0" RedirectPath="" Required="False" TextBuffered="False" UniqueName="False" DefaultValue="" RSSTitle="False" RSSDescription="False" MemberSelectGroupID="0" EditTab="" Scramble="False" LookupList="" NotEditable="False" Password="False" ReadOnly="False" ManyToManyRulePrimaryField="" ManyToManyRuleSecondaryField="" IsModified="True" IsBaseField="False" LookupContent="" RedirectContent="" ManyToManyContent="" ManyToManyRuleContent="" ></Field>
+		<Field Name="Active" active="True" AdminOnly="False" Authorable="False" Caption="Active" DeveloperOnly="True" EditSortPriority="9999" FieldType="Boolean" HTMLContent="False" IndexColumn="0" IndexSortDirection="" IndexSortOrder="0" IndexWidth="0" RedirectID="0" RedirectPath="" Required="False" TextBuffered="False" UniqueName="False" DefaultValue="1" RSSTitle="False" RSSDescription="False" MemberSelectGroupID="0" EditTab="" Scramble="False" LookupList="" NotEditable="False" Password="False" ReadOnly="False" ManyToManyRulePrimaryField="" ManyToManyRuleSecondaryField="" IsModified="False" IsBaseField="False" LookupContent="" RedirectContent="" ManyToManyContent="" ManyToManyRuleContent="" ></Field>
+		<Field Name="SortOrder" active="True" AdminOnly="False" Authorable="False" Caption="Alpha Sort Order" DeveloperOnly="False" EditSortPriority="2000" FieldType="Text" HTMLContent="False" IndexColumn="0" IndexSortDirection="" IndexSortOrder="0" IndexWidth="0" RedirectID="0" RedirectPath="" Required="False" TextBuffered="False" UniqueName="False" DefaultValue="" RSSTitle="False" RSSDescription="False" MemberSelectGroupID="0" EditTab="" Scramble="False" LookupList="" NotEditable="False" Password="False" ReadOnly="False" ManyToManyRulePrimaryField="" ManyToManyRuleSecondaryField="" IsModified="False" IsBaseField="False" LookupContent="" RedirectContent="" ManyToManyContent="" ManyToManyRuleContent="" ></Field>
+		<Field Name="rank" active="True" AdminOnly="False" Authorable="True" Caption="Rank" DeveloperOnly="False" EditSortPriority="1000" FieldType="Text" HTMLContent="False" IndexColumn="" IndexSortDirection="" IndexSortOrder="" IndexWidth="" RedirectID="" RedirectPath="" Required="False" TextBuffered="False" UniqueName="False" DefaultValue="" RSSTitle="False" RSSDescription="False" MemberSelectGroupID="" EditTab="" Scramble="False" LookupList="" NotEditable="False" Password="False" ReadOnly="False" ManyToManyRulePrimaryField="" ManyToManyRuleSecondaryField="" IsModified="True" IsBaseField="False" LookupContent="" RedirectContent="" ManyToManyContent="" ManyToManyRuleContent="" ></Field>
+		<Field Name="unit" active="True" AdminOnly="False" Authorable="True" Caption="Unit" DeveloperOnly="False" EditSortPriority="1010" FieldType="Text" HTMLContent="False" IndexColumn="" IndexSortDirection="" IndexSortOrder="" IndexWidth="" RedirectID="" RedirectPath="" Required="False" TextBuffered="False" UniqueName="False" DefaultValue="" RSSTitle="False" RSSDescription="False" MemberSelectGroupID="" EditTab="" Scramble="False" LookupList="" NotEditable="False" Password="False" ReadOnly="False" ManyToManyRulePrimaryField="" ManyToManyRuleSecondaryField="" IsModified="True" IsBaseField="False" LookupContent="" RedirectContent="" ManyToManyContent="" ManyToManyRuleContent="" ></Field>
+		<Field Name="firstName" active="True" AdminOnly="False" Authorable="True" Caption="First Name" DeveloperOnly="False" EditSortPriority="1020" FieldType="Text" HTMLContent="False" IndexColumn="" IndexSortDirection="" IndexSortOrder="" IndexWidth="" RedirectID="" RedirectPath="" Required="False" TextBuffered="False" UniqueName="False" DefaultValue="" RSSTitle="False" RSSDescription="False" MemberSelectGroupID="" EditTab="" Scramble="False" LookupList="" NotEditable="False" Password="False" ReadOnly="False" ManyToManyRulePrimaryField="" ManyToManyRuleSecondaryField="" IsModified="True" IsBaseField="False" LookupContent="" RedirectContent="" ManyToManyContent="" ManyToManyRuleContent="" ></Field>
+		<Field Name="middleInitial" active="True" AdminOnly="False" Authorable="True" Caption="Middle Initial" DeveloperOnly="False" EditSortPriority="1030" FieldType="Text" HTMLContent="False" IndexColumn="" IndexSortDirection="" IndexSortOrder="" IndexWidth="" RedirectID="" RedirectPath="" Required="False" TextBuffered="False" UniqueName="False" DefaultValue="" RSSTitle="False" RSSDescription="False" MemberSelectGroupID="" EditTab="" Scramble="False" LookupList="" NotEditable="False" Password="False" ReadOnly="False" ManyToManyRulePrimaryField="" ManyToManyRuleSecondaryField="" IsModified="True" IsBaseField="False" LookupContent="" RedirectContent="" ManyToManyContent="" ManyToManyRuleContent="" ></Field>
+		<Field Name="lastName" active="True" AdminOnly="False" Authorable="True" Caption="Last Name" DeveloperOnly="False" EditSortPriority="1040" FieldType="Text" HTMLContent="False" IndexColumn="" IndexSortDirection="" IndexSortOrder="" IndexWidth="" RedirectID="" RedirectPath="" Required="False" TextBuffered="False" UniqueName="False" DefaultValue="" RSSTitle="False" RSSDescription="False" MemberSelectGroupID="" EditTab="" Scramble="False" LookupList="" NotEditable="False" Password="False" ReadOnly="False" ManyToManyRulePrimaryField="" ManyToManyRuleSecondaryField="" IsModified="True" IsBaseField="False" LookupContent="" RedirectContent="" ManyToManyContent="" ManyToManyRuleContent="" ></Field>
+		<Field Name="suffix" active="True" AdminOnly="False" Authorable="True" Caption="Suffix" DeveloperOnly="False" EditSortPriority="1050" FieldType="Text" HTMLContent="False" IndexColumn="" IndexSortDirection="" IndexSortOrder="" IndexWidth="" RedirectID="" RedirectPath="" Required="False" TextBuffered="False" UniqueName="False" DefaultValue="" RSSTitle="False" RSSDescription="False" MemberSelectGroupID="" EditTab="" Scramble="False" LookupList="" NotEditable="False" Password="False" ReadOnly="False" ManyToManyRulePrimaryField="" ManyToManyRuleSecondaryField="" IsModified="True" IsBaseField="False" LookupContent="" RedirectContent="" ManyToManyContent="" ManyToManyRuleContent="" ></Field>
+		<Field Name="email" active="True" AdminOnly="False" Authorable="True" Caption="E-mail" DeveloperOnly="False" EditSortPriority="1060" FieldType="Text" HTMLContent="False" IndexColumn="" IndexSortDirection="" IndexSortOrder="" IndexWidth="" RedirectID="" RedirectPath="" Required="False" TextBuffered="False" UniqueName="False" DefaultValue="" RSSTitle="False" RSSDescription="False" MemberSelectGroupID="" EditTab="" Scramble="False" LookupList="" NotEditable="False" Password="False" ReadOnly="False" ManyToManyRulePrimaryField="" ManyToManyRuleSecondaryField="" IsModified="True" IsBaseField="False" LookupContent="" RedirectContent="" ManyToManyContent="" ManyToManyRuleContent="" ></Field>
+		<Field Name="mailingAddress" active="True" AdminOnly="False" Authorable="True" Caption="Mailing Address" DeveloperOnly="False" EditSortPriority="1070" FieldType="Text" HTMLContent="False" IndexColumn="" IndexSortDirection="" IndexSortOrder="" IndexWidth="" RedirectID="" RedirectPath="" Required="False" TextBuffered="False" UniqueName="False" DefaultValue="" RSSTitle="False" RSSDescription="False" MemberSelectGroupID="" EditTab="" Scramble="False" LookupList="" NotEditable="False" Password="False" ReadOnly="False" ManyToManyRulePrimaryField="" ManyToManyRuleSecondaryField="" IsModified="True" IsBaseField="False" LookupContent="" RedirectContent="" ManyToManyContent="" ManyToManyRuleContent="" ></Field>
+		<Field Name="city" active="True" AdminOnly="False" Authorable="True" Caption="City" DeveloperOnly="False" EditSortPriority="1080" FieldType="Text" HTMLContent="False" IndexColumn="" IndexSortDirection="" IndexSortOrder="" IndexWidth="" RedirectID="" RedirectPath="" Required="False" TextBuffered="False" UniqueName="False" DefaultValue="" RSSTitle="False" RSSDescription="False" MemberSelectGroupID="" EditTab="" Scramble="False" LookupList="" NotEditable="False" Password="False" ReadOnly="False" ManyToManyRulePrimaryField="" ManyToManyRuleSecondaryField="" IsModified="True" IsBaseField="False" LookupContent="" RedirectContent="" ManyToManyContent="" ManyToManyRuleContent="" ></Field>
+		<Field Name="state" active="True" AdminOnly="False" Authorable="True" Caption="State" DeveloperOnly="False" EditSortPriority="1090" FieldType="Text" HTMLContent="False" IndexColumn="" IndexSortDirection="" IndexSortOrder="" IndexWidth="" RedirectID="" RedirectPath="" Required="False" TextBuffered="False" UniqueName="False" DefaultValue="" RSSTitle="False" RSSDescription="False" MemberSelectGroupID="" EditTab="" Scramble="False" LookupList="" NotEditable="False" Password="False" ReadOnly="False" ManyToManyRulePrimaryField="" ManyToManyRuleSecondaryField="" IsModified="True" IsBaseField="False" LookupContent="" RedirectContent="" ManyToManyContent="" ManyToManyRuleContent="" ></Field>
+		<Field Name="zip" active="True" AdminOnly="False" Authorable="True" Caption="Zip" DeveloperOnly="False" EditSortPriority="1100" FieldType="Text" HTMLContent="False" IndexColumn="" IndexSortDirection="" IndexSortOrder="" IndexWidth="" RedirectID="" RedirectPath="" Required="False" TextBuffered="False" UniqueName="False" DefaultValue="" RSSTitle="False" RSSDescription="False" MemberSelectGroupID="" EditTab="" Scramble="False" LookupList="" NotEditable="False" Password="False" ReadOnly="False" ManyToManyRulePrimaryField="" ManyToManyRuleSecondaryField="" IsModified="True" IsBaseField="False" LookupContent="" RedirectContent="" ManyToManyContent="" ManyToManyRuleContent="" ></Field>
+		<Field Name="phoneNumber" active="True" AdminOnly="False" Authorable="True" Caption="Phone Number" DeveloperOnly="False" EditSortPriority="1110" FieldType="Text" HTMLContent="False" IndexColumn="" IndexSortDirection="" IndexSortOrder="" IndexWidth="" RedirectID="" RedirectPath="" Required="False" TextBuffered="False" UniqueName="False" DefaultValue="" RSSTitle="False" RSSDescription="False" MemberSelectGroupID="" EditTab="" Scramble="False" LookupList="" NotEditable="False" Password="False" ReadOnly="False" ManyToManyRulePrimaryField="" ManyToManyRuleSecondaryField="" IsModified="True" IsBaseField="False" LookupContent="" RedirectContent="" ManyToManyContent="" ManyToManyRuleContent="" ></Field>
+		<Field Name="membershipLevel" active="True" AdminOnly="False" Authorable="True" Caption="Membership Level" DeveloperOnly="False" EditSortPriority="1120" FieldType="Text" HTMLContent="False" IndexColumn="" IndexSortDirection="" IndexSortOrder="" IndexWidth="" RedirectID="" RedirectPath="" Required="False" TextBuffered="False" UniqueName="False" DefaultValue="" RSSTitle="False" RSSDescription="False" MemberSelectGroupID="" EditTab="" Scramble="False" LookupList="" NotEditable="False" Password="False" ReadOnly="False" ManyToManyRulePrimaryField="" ManyToManyRuleSecondaryField="" IsModified="True" IsBaseField="False" LookupContent="" RedirectContent="" ManyToManyContent="" ManyToManyRuleContent="" ></Field>
+		<Field Name="internalUseVisitId" active="True" AdminOnly="False" Authorable="True" Caption="(Internal Use) Visit ID" DeveloperOnly="True" EditSortPriority="9998" FieldType="Integer" HTMLContent="False" IndexColumn="" IndexSortDirection="" IndexSortOrder="" IndexWidth="" RedirectID="" RedirectPath="" Required="False" TextBuffered="False" UniqueName="False" DefaultValue="" RSSTitle="False" RSSDescription="False" MemberSelectGroupID="" EditTab="" Scramble="False" LookupList="" NotEditable="False" Password="False" ReadOnly="False" ManyToManyRulePrimaryField="" ManyToManyRuleSecondaryField="" IsModified="True" IsBaseField="False" LookupContent="" RedirectContent="" ManyToManyContent="" ManyToManyRuleContent="" ></Field>
+		<Field Name="internalUseDateCompleted" active="True" AdminOnly="False" Authorable="True" Caption="(Internal Use) Date Completed" DeveloperOnly="False" EditSortPriority="9997" FieldType="Date" HTMLContent="False" IndexColumn="20" IndexSortDirection="1" IndexSortOrder="99" IndexWidth="20" RedirectID="" RedirectPath="" Required="False" TextBuffered="False" UniqueName="False" DefaultValue="" RSSTitle="False" RSSDescription="False" MemberSelectGroupID="" EditTab="" Scramble="False" LookupList="" NotEditable="False" Password="False" ReadOnly="False" ManyToManyRulePrimaryField="" ManyToManyRuleSecondaryField="" IsModified="True" IsBaseField="False" LookupContent="" RedirectContent="" ManyToManyContent="" ManyToManyRuleContent="" ></Field>
+		<Field Name="ccResponseMessage" active="True" AdminOnly="False" Authorable="True" Caption="Credit Card Process Message" DeveloperOnly="False" EditSortPriority="1130" FieldType="Text" HTMLContent="False" IndexColumn="" IndexSortDirection="" IndexSortOrder="" IndexWidth="" RedirectID="" RedirectPath="" Required="False" TextBuffered="False" UniqueName="False" DefaultValue="" RSSTitle="False" RSSDescription="False" MemberSelectGroupID="" EditTab="" Scramble="False" LookupList="" NotEditable="False" Password="False" ReadOnly="False" ManyToManyRulePrimaryField="" ManyToManyRuleSecondaryField="" IsModified="True" IsBaseField="False" LookupContent="" RedirectContent="" ManyToManyContent="" ManyToManyRuleContent="" ></Field>
+		<Field Name="ccReferenceNumber" active="True" AdminOnly="False" Authorable="True" Caption="Credit Card Reference" DeveloperOnly="False" EditSortPriority="1140" FieldType="Text" HTMLContent="False" IndexColumn="" IndexSortDirection="" IndexSortOrder="" IndexWidth="" RedirectID="" RedirectPath="" Required="False" TextBuffered="False" UniqueName="False" DefaultValue="" RSSTitle="False" RSSDescription="False" MemberSelectGroupID="" EditTab="" Scramble="False" LookupList="" NotEditable="False" Password="False" ReadOnly="False" ManyToManyRulePrimaryField="" ManyToManyRuleSecondaryField="" IsModified="True" IsBaseField="False" LookupContent="" RedirectContent="" ManyToManyContent="" ManyToManyRuleContent="" ></Field>
+		<Field Name="ccAmountPaid" active="True" AdminOnly="False" Authorable="True" Caption="Credit Card Amount" DeveloperOnly="False" EditSortPriority="1125" FieldType="Float" HTMLContent="False" IndexColumn="" IndexSortDirection="" IndexSortOrder="" IndexWidth="" RedirectID="" RedirectPath="" Required="False" TextBuffered="False" UniqueName="False" DefaultValue="" RSSTitle="False" RSSDescription="False" MemberSelectGroupID="" EditTab="" Scramble="False" LookupList="" NotEditable="False" Password="False" ReadOnly="False" ManyToManyRulePrimaryField="" ManyToManyRuleSecondaryField="" IsModified="True" IsBaseField="False" LookupContent="" RedirectContent="" ManyToManyContent="" ManyToManyRuleContent="" ></Field>
+	</CDef>
+	<CDef Name="Ngaus Membership Levels" Active="1" AdminOnly="0" AllowAdd="1" AllowCalendarEvents="0" AllowContentChildTool="0" AllowContentTracking="0" AllowDelete="1" AllowMetaContent="0" AllowTopicRules="0" AllowWorkflowAuthoring="0" AuthoringDataSourceName="Default" AuthoringTableName="ngausMembershipLevels" ContentDataSourceName="Default" ContentTableName="ngausMembershipLevels" DefaultSortMethod="" DeveloperOnly="0" DropDownFieldList="Name" EditorGroupName="Content Editors" Parent="" IconLink="" IconHeight="0" IconWidth="0" IconSprites="0" isbasecontent="" guid="{F9018737-7965-414A-8A14-E5BC7D460D69}" >
+		<Field Name="Name" active="True" AdminOnly="False" Authorable="True" Caption="Name" DeveloperOnly="False" EditSortPriority="110" FieldType="Text" HTMLContent="False" IndexColumn="0" IndexSortDirection="1" IndexSortOrder="99" IndexWidth="51" RedirectID="0" RedirectPath="" Required="False" TextBuffered="False" UniqueName="False" DefaultValue="" RSSTitle="False" RSSDescription="False" MemberSelectGroupID="0" EditTab="" Scramble="False" LookupList="" NotEditable="False" Password="False" ReadOnly="False" ManyToManyRulePrimaryField="" ManyToManyRuleSecondaryField="" IsModified="True" IsBaseField="False" LookupContent="" RedirectContent="" ManyToManyContent="" ManyToManyRuleContent="" ></Field>
+		<Field Name="Active" active="True" AdminOnly="False" Authorable="False" Caption="Active" DeveloperOnly="False" EditSortPriority="200" FieldType="Boolean" HTMLContent="False" IndexColumn="0" IndexSortDirection="" IndexSortOrder="0" IndexWidth="0" RedirectID="0" RedirectPath="" Required="False" TextBuffered="False" UniqueName="False" DefaultValue="1" RSSTitle="False" RSSDescription="False" MemberSelectGroupID="0" EditTab="" Scramble="False" LookupList="" NotEditable="False" Password="False" ReadOnly="False" ManyToManyRulePrimaryField="" ManyToManyRuleSecondaryField="" IsModified="False" IsBaseField="False" LookupContent="" RedirectContent="" ManyToManyContent="" ManyToManyRuleContent="" ></Field>
+		<Field Name="SortOrder" active="True" AdminOnly="False" Authorable="True" Caption="Alpha Sort Order" DeveloperOnly="False" EditSortPriority="2000" FieldType="Text" HTMLContent="False" IndexColumn="0" IndexSortDirection="" IndexSortOrder="0" IndexWidth="0" RedirectID="0" RedirectPath="" Required="False" TextBuffered="False" UniqueName="False" DefaultValue="" RSSTitle="False" RSSDescription="False" MemberSelectGroupID="0" EditTab="" Scramble="False" LookupList="" NotEditable="False" Password="False" ReadOnly="False" ManyToManyRulePrimaryField="" ManyToManyRuleSecondaryField="" IsModified="False" IsBaseField="False" LookupContent="" RedirectContent="" ManyToManyContent="" ManyToManyRuleContent="" ></Field>
+		<Field Name="stateAmount" active="True" AdminOnly="False" Authorable="True" Caption="State Amount" DeveloperOnly="False" EditSortPriority="1000" FieldType="Currency" HTMLContent="False" IndexColumn="20" IndexSortDirection="1" IndexSortOrder="99" IndexWidth="28" RedirectID="" RedirectPath="" Required="False" TextBuffered="False" UniqueName="False" DefaultValue="" RSSTitle="False" RSSDescription="False" MemberSelectGroupID="" EditTab="" Scramble="False" LookupList="" NotEditable="False" Password="False" ReadOnly="False" ManyToManyRulePrimaryField="" ManyToManyRuleSecondaryField="" IsModified="True" IsBaseField="False" LookupContent="" RedirectContent="" ManyToManyContent="" ManyToManyRuleContent="" ></Field>
+		<Field Name="ngausAmount" active="True" AdminOnly="False" Authorable="True" Caption="NGAUS Amount" DeveloperOnly="False" EditSortPriority="1100" FieldType="Currency" HTMLContent="False" IndexColumn="10" IndexSortDirection="1" IndexSortOrder="99" IndexWidth="32" RedirectID="" RedirectPath="" Required="False" TextBuffered="False" UniqueName="False" DefaultValue="" RSSTitle="False" RSSDescription="False" MemberSelectGroupID="" EditTab="" Scramble="False" LookupList="" NotEditable="False" Password="False" ReadOnly="False" ManyToManyRulePrimaryField="" ManyToManyRuleSecondaryField="" IsModified="True" IsBaseField="False" LookupContent="" RedirectContent="" ManyToManyContent="" ManyToManyRuleContent="" ></Field>
+	</CDef>
+	<ImportCollection name="Payment Processing">{72E95C7C-2FAE-46B5-8081-21F7DFE6ECBF}</ImportCollection>
+	<Resource name="ngausmembership.dll" type="executable" path="" />
+</Collection>

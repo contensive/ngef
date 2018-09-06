@@ -1,0 +1,6 @@
+C:\h\ngausMembership\ngausMembership\bin\Debug\ngausMembership.dll
+C:\h\ngausMembership\ngausMembership\bin\Debug\ngausMembership.pdb
+C:\h\ngausMembership\ngausMembership\bin\Debug\CPBase.dll
+C:\h\ngausMembership\ngausMembership\obj\Debug\ResolveAssemblyReference.cache
+C:\h\ngausMembership\ngausMembership\obj\Debug\ngausMembership.dll
+C:\h\ngausMembership\ngausMembership\obj\Debug\ngausMembership.pdb

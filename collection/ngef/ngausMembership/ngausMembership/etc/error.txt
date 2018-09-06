@@ -1,0 +1,16 @@
+"6/6/2012 6:01:23 PM","OptionString=[CreditCardNumber=5465407207648670&CreditCardExpiration=4/1/2014&PaymentAmount=1&SecurityCode=&Comment1=NGAUS Membership#0044# online app 27&Comment2=&TransactionString=NGAUS Membership#0044# online app 27&AVSAddress=&AVSZip=20147&Wrapper=&As Ajax=&css Container id=&css Container class=&instanceid=-2&transdesc=NGAUS Membership#0044# online app 27&custfirstname=TestFirstName&custlastname=TestLastName&custcity=TestCity&custstate=TestState&custzip=20147&custemail=jay@contensive.com&InstanceID=]"
+"6/6/2012 6:01:23 PM","PaymentAmount=[1]"
+"6/6/2012 6:01:25 PM","
+ProcessorRequest: https://www.myvirtualmerchant.com/VirtualMerchant/process.do?ssl_merchant_id=594963&ssl_user_id=webpage&ssl_pin=EYT3UL&ssl_test_mode=1&ssl_transaction_type=ccsale&ssl_amount=1&ssl_card_number=5465407207648670&ssl_description=NGAUS Membership, online app 27&ssl_result_format=ASCII&ssl_show_form=false&ssl_exp_date=0414
+
+ProcessorResponse: errorCode=4009
+errorName=Required Field Not Supplied
+errorMessage=The field Address1 (ssl_avs_address) required but not supplied in the authorization request.
+Class: ProcessClass7
+Processor: 5
+PaymentProcessed(5465407207648670,4/1/2014,1,,NGAUS Membership, online app 27,,NGAUS Membership, online app 27,,)
+ResponseMessage: The field Address1 (ssl_avs_address) required but not supplied in the authorization request.
+CVV2Checked: No
+AVSChecked: No
+ReferenceNumber: 
+PaymentProcessed: False"

@@ -1,0 +1,32 @@
+<Collection name="NGEF" guid="{4E0994DE-56AA-48FC-840B-F66D936112E3}" version="1">
+  <Interfaces>
+    <Page name="Muster Search" guid="{1E563E4C-56C3-4FD9-9F80-96944E00D6F5}">
+      <Description>Searches the Muster Members.</Description>
+      <ActiveXDLL>ngaus.DLL</ActiveXDLL>
+      <ActiveXProgramID>ngaus.MusterClass</ActiveXProgramID>
+      <Content>true</Content>
+      <Admin>true</Admin>
+    </Page>
+    <Page name="Muster Enrollment" guid="{C1ECB24C-C5FD-42F7-9AA0-F2DB6BF4450B}">
+      <Description>Enrollment in the Muster database.</Description>
+      <ActiveXDLL>ngaus.DLL</ActiveXDLL>
+      <ActiveXProgramID>ngaus.MusterSignUpClass</ActiveXProgramID>
+      <Content>true</Content>
+      <Admin>true</Admin>
+    </Page>
+    <Page name="Muster Bio Update" guid="{5057FC8F-2E09-4848-8188-17CBC616B401}">
+      <Description>Profile update for Muster.</Description>
+      <ActiveXDLL>ngaus.DLL</ActiveXDLL>
+      <ActiveXProgramID>ngaus.BioClass</ActiveXProgramID>
+      <Content>true</Content>
+      <Admin>true</Admin>
+    </Page>
+    <Page name="Donation Form" guid="{B5528BEA-A6EB-42C2-BAAC-E31F5CA1487C}">
+      <Description>NGEF Donation Form.</Description>
+      <ActiveXDLL>ngaus.DLL</ActiveXDLL>
+      <ActiveXProgramID>ngaus.DonationClass</ActiveXProgramID>
+      <Content>true</Content>
+      <Admin>true</Admin>
+    </Page>
+  </Interfaces>
+</Collection>
