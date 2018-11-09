@@ -1,0 +1,11 @@
+C:\Users\kmaAdmin\Documents\GitHub\ngef\source\ngausDonationCampaigns\bin\Debug\ngausDonationCampaigns.dll
+C:\Users\kmaAdmin\Documents\GitHub\ngef\source\ngausDonationCampaigns\bin\Debug\ngausDonationCampaigns.pdb
+C:\Users\kmaAdmin\Documents\GitHub\ngef\source\ngausDonationCampaigns\bin\Debug\ngausDonationCampaigns.xml
+C:\Users\kmaAdmin\Documents\GitHub\ngef\source\ngausDonationCampaigns\bin\Debug\CPBase.dll
+C:\Users\kmaAdmin\Documents\GitHub\ngef\source\ngausDonationCampaigns\obj\Debug\Contensive.Addons.ngausDonationCampaigns.Resources.resources
+C:\Users\kmaAdmin\Documents\GitHub\ngef\source\ngausDonationCampaigns\obj\Debug\ngausDonationCampaigns.vbproj.GenerateResource.cache
+C:\Users\kmaAdmin\Documents\GitHub\ngef\source\ngausDonationCampaigns\obj\Debug\ngausDonationCampaigns.vbproj.CoreCompileInputs.cache
+C:\Users\kmaAdmin\Documents\GitHub\ngef\source\ngausDonationCampaigns\obj\Debug\ngausDonationCampaigns.vbproj.CopyComplete
+C:\Users\kmaAdmin\Documents\GitHub\ngef\source\ngausDonationCampaigns\obj\Debug\ngausDonationCampaigns.dll
+C:\Users\kmaAdmin\Documents\GitHub\ngef\source\ngausDonationCampaigns\obj\Debug\ngausDonationCampaigns.xml
+C:\Users\kmaAdmin\Documents\GitHub\ngef\source\ngausDonationCampaigns\obj\Debug\ngausDonationCampaigns.pdb

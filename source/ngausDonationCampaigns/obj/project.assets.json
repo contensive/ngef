@@ -1,0 +1,120 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETFramework,Version=v4.6.2": {
+      "contensive.clib/4.1.2": {
+        "type": "package",
+        "compile": {
+          "lib/net35/CPBase.dll": {}
+        },
+        "runtime": {
+          "lib/net35/CPBase.dll": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.6.2/win": {
+      "contensive.clib/4.1.2": {
+        "type": "package",
+        "compile": {
+          "lib/net35/CPBase.dll": {}
+        },
+        "runtime": {
+          "lib/net35/CPBase.dll": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.6.2/win-x64": {
+      "contensive.clib/4.1.2": {
+        "type": "package",
+        "compile": {
+          "lib/net35/CPBase.dll": {}
+        },
+        "runtime": {
+          "lib/net35/CPBase.dll": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.6.2/win-x86": {
+      "contensive.clib/4.1.2": {
+        "type": "package",
+        "compile": {
+          "lib/net35/CPBase.dll": {}
+        },
+        "runtime": {
+          "lib/net35/CPBase.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "contensive.clib/4.1.2": {
+      "sha512": "0tv0a1GQ8EfEkSRQDUBc/Dp7XZRxczCbpuh4JuZeLNyIIgFo8xPnhRt8Yn/OGQWOWdm7RMipkFB3tcpE/rkcjg==",
+      "type": "package",
+      "path": "contensive.clib/4.1.2",
+      "files": [
+        "contensive.clib.4.1.2.nupkg.sha512",
+        "contensive.clib.nuspec",
+        "lib/net35/CPBase.dll",
+        "readme.txt"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETFramework,Version=v4.6.2": [
+      "contensive.clib >= 4.1.2"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\kmaAdmin\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\kmaAdmin\\Documents\\GitHub\\ngef\\source\\ngausDonationCampaigns\\ngausDonationCampaigns.vbproj",
+      "projectName": "ngausDonationCampaigns",
+      "projectPath": "C:\\Users\\kmaAdmin\\Documents\\GitHub\\ngef\\source\\ngausDonationCampaigns\\ngausDonationCampaigns.vbproj",
+      "packagesPath": "C:\\Users\\kmaAdmin\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\kmaAdmin\\Documents\\GitHub\\ngef\\source\\ngausDonationCampaigns\\obj\\",
+      "projectStyle": "PackageReference",
+      "skipContentFileWrite": true,
+      "configFilePaths": [
+        "C:\\Users\\kmaAdmin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net462"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Users\\kmaAdmin\\Documents\\nuget-local-test": {},
+        "https://www.nuget.org/api/v2/": {}
+      },
+      "frameworks": {
+        "net462": {
+          "projectReferences": {}
+        }
+      }
+    },
+    "frameworks": {
+      "net462": {
+        "dependencies": {
+          "contensive.clib": {
+            "target": "Package",
+            "version": "[4.1.2, )"
+          }
+        }
+      }
+    },
+    "runtimes": {
+      "win": {
+        "#import": []
+      },
+      "win-x64": {
+        "#import": []
+      },
+      "win-x86": {
+        "#import": []
+      }
+    }
+  }
+}
